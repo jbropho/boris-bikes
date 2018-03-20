@@ -1,20 +1,45 @@
-# User stories 
+# User stories
 
-## Nouns 
+## Nouns
 * Person
 * Bike
-* Station 
+* Station
 
-## Verbs 
+## Verbs
 * Use
 * Docking
-* Release 
+* Release
 * See
-* Working 
+* Working
 
+
+
+### USER STORY 1
 
 | Objects       | Messages      |
 | ------------- | ------------- |
-| Person        | check_bikes   |
-| Bike          | is_working?   |  
+| Person        | req_bike      |
 | Station       | release_bike  |
+
+### USER STORY 2
+
+| Objects       | Messages      |
+| ------------- | ------------- |
+| Person        |               |
+| Bike          | is_working?   |  
+| Station       | check_bike    |
+
+### Diagram
+
+```
+Person =req_bike=> Station
+
+Station =check_bike=> Bike (is the bike working?)
+Bike =is_working?=> Station (true / false)
+
+(if is_working? is true)
+
+Station =release_bike=> Person
+
+
+```
