@@ -1,7 +1,5 @@
 require 'app'
 
-describe 'Bike' do 
-    it 'responds to working' do 
-        expect(Bike.new).to respond_to(:working?)
-    end 
+describe Bike do 
+    it { is_expected.to respond_to :working? }
 end 
